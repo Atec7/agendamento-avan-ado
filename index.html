@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Agendamento</title>
+</head>
+<body>
+    <div class="booking-form">
+        <h1>Agendamento</h1>
+        <form id="bookingForm">
+            <label for="date">Data:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="time">Hora:</label>
+            <select id="time" name="time" required>
+                <option value="">Selecione um horário</option>
+                <option value="09:00">09:00</option>
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="12:00">12:00</option>
+                <option value="13:00">13:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+                <option value="17:00">17:00</option>
+            </select>
+
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="services">Serviços:</label>
+            <div id="services">
+                <label><input type="checkbox" value="Corte de cabelo"> Corte de cabelo</label><br>
+                <label><input type="checkbox" value="Barba"> Barba</label><br>
+                <label><input type="checkbox" value="Corte de cabelo e barba"> Corte de cabelo e barba</label><br>
+                <label><input type="checkbox" value="Hidratação capilar"> Hidratação capilar</label><br>
+                <label><input type="checkbox" value="Coloração"> Coloração</label><br>
+                <label><input type="checkbox" value="Bigode"> Bigode</label>
+            </div>
+
+            <input type="button" value="Solicitar Agendamento" onclick="checkAndBook()">
+        </form>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
